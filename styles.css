@@ -1,0 +1,252 @@
+
+:root {
+  --ink: #0b0e11;
+  --ash: #eef2f3;
+  --paper: rgba(255, 255, 255, 0.86);
+  --gold: #b08c3a;
+  --oxide: #7b2c20;
+  --teal: #0f4c5c;
+  --shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+  --radius: 16px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  color: var(--ink);
+  font-family: "Source Sans 3", "Source Sans Pro", system-ui, -apple-system, sans-serif;
+  background: #101418;
+}
+
+.bg {
+  position: fixed;
+  inset: 0;
+  background-image: url("assets/auschwitz.png");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.45;
+  filter: grayscale(0.15) contrast(1.05) saturate(0.85);
+  z-index: -2;
+}
+
+.grain {
+  position: fixed;
+  inset: 0;
+  background-image: radial-gradient(rgba(0, 0, 0, 0.18) 1px, transparent 1px);
+  background-size: 3px 3px;
+  opacity: 0.35;
+  z-index: -1;
+  mix-blend-mode: multiply;
+}
+
+.hero {
+  padding: 80px 20px 40px;
+}
+
+.hero__inner {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 36px 40px;
+  background: var(--paper);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.hero__eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-weight: 700;
+  color: var(--oxide);
+  margin: 0 0 12px;
+}
+
+h1 {
+  font-family: "EB Garamond", "Times New Roman", serif;
+  font-size: clamp(2.2rem, 4vw, 3.6rem);
+  margin: 0 0 16px;
+}
+
+.hero__lead {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin: 0 0 24px;
+}
+
+.hero__meta {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 12px;
+}
+
+.meta__label {
+  display: block;
+  font-weight: 700;
+  color: var(--teal);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.75rem;
+}
+
+.meta__value {
+  display: block;
+  font-weight: 600;
+  margin-top: 6px;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto 60px;
+  padding: 0 20px 60px;
+}
+
+.panel {
+  background: var(--paper);
+  border-radius: var(--radius);
+  padding: 32px;
+  margin: 28px 0;
+  box-shadow: var(--shadow);
+}
+
+.panel h2 {
+  margin-top: 0;
+  font-family: "EB Garamond", "Times New Roman", serif;
+  font-size: 2rem;
+}
+
+.lead {
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 22px;
+  margin: 30px 0;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: var(--radius);
+  padding: 24px;
+  box-shadow: var(--shadow);
+  border-top: 6px solid var(--oxide);
+}
+
+.card h3 {
+  margin-top: 0;
+  font-family: "EB Garamond", "Times New Roman", serif;
+  font-size: 1.4rem;
+}
+
+.callout {
+  margin-top: 16px;
+  padding: 14px 16px;
+  background: rgba(15, 76, 92, 0.08);
+  border-left: 4px solid var(--teal);
+}
+
+.list {
+  display: grid;
+  gap: 10px;
+  margin: 16px 0 0;
+  padding: 0 0 0 18px;
+}
+
+.quiz {
+  display: grid;
+  gap: 22px;
+}
+
+.quiz__item {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: var(--radius);
+  padding: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.quiz__options {
+  display: grid;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.quiz__options button {
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  background: #f7f7f7;
+  cursor: pointer;
+  font-weight: 600;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.quiz__options button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+.quiz__options button.correct {
+  background: rgba(23, 122, 84, 0.12);
+  border-color: #177a54;
+}
+
+.quiz__options button.wrong {
+  background: rgba(141, 19, 19, 0.12);
+  border-color: #8d1313;
+}
+
+.quiz__feedback {
+  margin-top: 12px;
+  font-weight: 600;
+}
+
+.sources {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+}
+
+.sources a {
+  color: var(--teal);
+  font-weight: 600;
+}
+
+.tasks {
+  margin-top: 20px;
+  padding: 18px;
+  background: rgba(176, 140, 58, 0.12);
+  border-radius: 12px;
+  border: 1px dashed rgba(176, 140, 58, 0.5);
+}
+
+.transcript {
+  margin-top: 16px;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 12px 16px;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.transcript pre {
+  white-space: pre-wrap;
+  font-family: "Source Sans 3", system-ui, sans-serif;
+  line-height: 1.5;
+}
+
+.footer {
+  text-align: center;
+  padding: 30px 12px 60px;
+  color: #f4f4f4;
+}
+
+@media (max-width: 700px) {
+  .hero__inner {
+    padding: 28px 24px;
+  }
+  .panel {
+    padding: 24px;
+  }
+}
